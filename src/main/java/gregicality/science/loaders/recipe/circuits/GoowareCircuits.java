@@ -1,6 +1,7 @@
 package gregicality.science.loaders.recipe.circuits;
 
 import gregicality.science.common.GCYSConfigHolder;
+import gregtech.api.metatileentity.multiblock.CleanroomType;
 import gregtech.api.recipes.GTRecipeHandler;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.MarkerMaterials;
@@ -64,6 +65,7 @@ public class GoowareCircuits {
                 .input(ADVANCED_SMD_TRANSISTOR, 16)
                 .input(wireFine, Europium, 8)
                 .output(GOOWARE_PROCESSOR, 2)
+                .cleanroom(CleanroomType.STERILE_CLEANROOM)
                 .duration(200).EUt(VA[UV]).buildAndRegister();
 
         CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
@@ -75,6 +77,7 @@ public class GoowareCircuits {
                 .input(wireFine, Europium, 16)
                 .output(GOOWARE_ASSEMBLY, 2)
                 .solderMultiplier(2)
+                .cleanroom(CleanroomType.STERILE_CLEANROOM)
                 .duration(400).EUt(VA[UV]).buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
@@ -128,6 +131,7 @@ public class GoowareCircuits {
                 .input(foil, NiobiumTitanium, 16)
                 .fluidInputs(SterileGrowthMedium.getFluid(4000))
                 .output(WETWARE_BOARD, 16)
+                .cleanroom(CleanroomType.CLEANROOM)
                 .duration(1200).EUt(VA[LuV]).buildAndRegister();
     }
 }

@@ -108,6 +108,7 @@ public class SpintronicCircuits {
                 .input(wireFine, ThalliumCopperChloride, 24)
                 .fluidInputs(SolderingAlloy.getFluid(L))
                 .output(ESR_COMPUTATION_UNIT)
+                .cleanroom(CleanroomType.CLEANROOM)
                 .duration(600).EUt(VA[UEV]).buildAndRegister();
     }
 
@@ -159,6 +160,7 @@ public class SpintronicCircuits {
                 .input(SPINTRONIC_TRANSISTOR, 8)
                 .input(wireFine, CarbonNanotube, 8)
                 .output(SPINTRONIC_PROCESSOR, 2)
+                .cleanroom(CleanroomType.STERILE_CLEANROOM)
                 .duration(200).EUt(VA[UEV]).buildAndRegister();
 
         CIRCUIT_ASSEMBLER_RECIPES.recipeBuilder()
@@ -170,6 +172,7 @@ public class SpintronicCircuits {
                 .input(wireFine, CarbonNanotube, 16)
                 .output(SPINTRONIC_ASSEMBLY, 2)
                 .solderMultiplier(2)
+                .cleanroom(CleanroomType.STERILE_CLEANROOM)
                 .duration(400).EUt(VA[UEV]).buildAndRegister();
 
         ASSEMBLY_LINE_RECIPES.recipeBuilder()
